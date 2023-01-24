@@ -1,0 +1,90 @@
+<div class="container-fluid">
+    <div class="left">
+        <ul class="breadcrumb">
+            <li><a routerLink="/fashion">Fashion</a></li>
+
+            <li>{{productDetailsData.title}}</li>
+        </ul>
+
+        <ng-img-magnifier [thumbImage]='image' [fullImage]='image' top="9" right="2" lensWidth="300" lensHeight="100"
+            resultWidth="55" resultHeight="85" imgWidth="500" imgHeight="500"></ng-img-magnifier>
+
+        <div class="text-center" style="position:relative;left:-46px">
+            <button class="btn cartButtons" style="background-color:orange"><i class="fa fa-shopping-cart"
+                    aria-hidden="true"></i> ADD TO CART</button>
+            <button class="btn cartButtons" style="background-color:orangered"><fa-icon
+                    [icon]="faBoltLightning"></fa-icon> BUY NOW</button>
+        </div>
+
+
+    </div>
+    <div class="right">
+        <h6 class="font-weight:200;margin-top:30px !important;">{{productDetailsData.title}}</h6>
+        <ngb-rating [max]="5" [(rate)]="currentRate"></ngb-rating>
+        <div style="float:right;font-size:25px;margin-right:50px"><fa-icon [icon]="faShareFromSquare" placement="bottom"
+                [ngbPopover]="template"></fa-icon>
+            <ng-template #template>
+                <ul>
+                    <li> <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a></li>
+                    <li> <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter </a>
+                    </li>
+                    <li> <a href="https://www.pinterest.com/"><i class="fa fa-pinterest" aria-hidden="true"></i>
+                            Pinterest </a></li>
+
+                </ul>
+            </ng-template>
+            <!-- <button type="button" 
+            class="btn btn-warning" 
+            placement="bottom" 
+            ngbTooltip="GeeksforGeeks">
+            bottom
+        </button> -->
+        </div>
+        <!-- <div> <ngx-star-rating formControlName="rating2" [id]="4" [disabled] ="true"></ngx-star-rating></div> -->
+        <h6 class="text-muted">{{productDetailsData.price}}</h6>
+
+        <div>
+            <h6 style="font-weight:600">Available Offers</h6>
+            <ul>
+                <li><span class="faTag"><fa-icon [icon]="faTag"></fa-icon></span><span> Special Price Get Flat
+                        50%</span></li>
+                <li><span class="faTag"><fa-icon [icon]="faTag"></fa-icon></span><span> Partner offer Purchase now and
+                        get cashback coupon for
+                        January/Febuary</span></li>
+                <li><span class="faTag"><fa-icon [icon]="faTag"></fa-icon></span><span> Partner offer OfferSign up for
+                        Flipkart Pay Later and get Flipkart Gift Card worth up to ₹1000</span></li>
+                <li><span class="faTag"><fa-icon [icon]="faTag"></fa-icon></span><span> Bank offer Purchase now and get
+                        cashback coupon for
+                        January/Febuary</span></li>
+
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h6>Material Type</h6>
+                    <p>100 % Cotton</p>
+                </li>
+                <li>
+                    <h6>Care Instructions</h6>
+                    <p>Machine Wash</p>
+                </li>
+            </ul>
+
+        </div>
+        <div>
+            <h6>About this item</h6>
+            <ul><li>Soft Breathable</li>
+            <li>Easy to wear & Remove</li>
+        <li>Comfort Fit</li></ul>
+            <p>{{productDetailsData.description}}</p>
+        </div>
+        <div>
+            <h6>Manufacturer</h6>
+            <p>JV Designs Pvt Ltd,Plot No:234,SomeWhere Phase-V,Gurgaon,Haryana,India</p>
+            <h6>Packer</h6>
+            <p>JV Designs Pvt Ltd,Plot No:234,SomeWhere Phase-V</p>
+        </div>
+    </div>
+</div>

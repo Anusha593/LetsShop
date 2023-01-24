@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="card mb-3 card-adj col-md-3" style="outline: none;border:none" *ngFor="let x of itemsData | filter:'jewelery'| filter:searchText">
+   
+        <div class="card-body">
+        <img class="card-img-top img-height" src="{{x.image}}">
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    </div>
+    <h6 class="card-header" style="white-space: nowrap;
+    overflow: hidden;text-overflow: ellipsis;">{{x.title}}</h6>
+     <div class=" text-muted" style="text-align:center">
+      {{x.price |currency:"&#8377;"}}
+    </div>
+    <div class="card-body">
+      <a  class="card-link btn btn-primary" style="display: flex;justify-content: center;" (click)="addToCart(x,x.id)">Add to Cart</a>
+      <!-- <a href="#" class="card-link">Another link</a> -->
+    </div>
+   
+  </div>
+</div>
+  

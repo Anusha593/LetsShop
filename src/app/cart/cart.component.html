@@ -1,0 +1,60 @@
+<ng-container *ngIf="product.length==0">
+    
+<div class="container">
+    <div class="card">
+        <h5 class="card-tile">
+            My Cart
+        </h5>
+   
+    <div class="center" style="text-align: center">
+        <img src="assets\empty-cart.webp" alt="" class="src" style="width:50%">
+        <h4>Your cart is empty</h4>
+        <h6>Add item to cart</h6>
+        <button class="btn btn-primary" routerLink="/home">Shop Now</button>
+    </div>
+</div>
+</div>
+</ng-container>
+<ng-container *ngIf="product.length!=0">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <tr>
+                    <th>Sr No</th>
+                    <th>Item Name</th>
+                    <th>Item Image</th>
+                    <th>Item Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+                <tbody>
+                    <tr *ngFor="let x of product;let i=index">
+                        <td>{{i+1}}</td>
+                    <td>{{x.title}}</td>
+                    <td><img style="width:30px" src="{{x.image}}"></td>
+                    <td>{{x.description}}</td>
+                    <td>{{x.price}}</td>
+                    <td>{{x.quantity}}</td>
+                    <td>{{x.price*x.quantity}}</td>
+                    <td><i class="fa fa-trash" (click)="removeItem(x)"></i></td>
+                    </tr>
+                    <!-- <tr class="buttonList"> -->
+                        
+                       
+                    <!-- </tr> -->
+                   
+                </tbody>
+            </table>
+            <div class="buttonList">
+                <button class="btn btn-danger mr-10" (click)="removeAllItem()">Empty</button>
+                <button class="btn btn-primary mr-10">shop more</button>
+                <button class="btn btn-success mr-10">Checkout</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+

@@ -1,0 +1,14 @@
+.img-height{
+    height: 15vw;
+    object-fit: cover;
+    transition: 2s ease-in-out;
+}
+.img-height:hover{
+    transition: 2s ease-in-out;
+    transform: scale(1.1);
+}
+// .card-adj{
+//     width: 15%;
+//      height: 15%;
+//     margin-right: 15px;
+// // }

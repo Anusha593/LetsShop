@@ -1,0 +1,94 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor03" (click)="!isCollapsed=isCollapsed">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> -->
+<div class="ml-250">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active"  routerLink="/home">
+                  
+<span class="logo">
+  <span>Let's</span>
+  <fa-icon [icon]="faShoppingBag" class="shoppingBag"></fa-icon>
+  
+
+  <span>shop</span>
+</span>
+                <!-- <img src="assets/images/logo.jpg"> -->
+                </a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link active"  routerLink="/home">Home
+                 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  routerLink="/fashion">Fashion
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/jewelery">Jewellery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/electronics">Electronics</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li> -->
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+              </li> -->
+            </ul>
+            <form class=" search mr-2">               
+               <input class="form-control me-sm-2 search-adj" type="text" placeholder="Search" name="searchText" [(ngModel)]="searchText" (ngModelChange)="sendText($event)">             
+          
+              </form>
+            <div class="cart" routerLink="/cart">
+              <span><i class="fa fa-shopping-cart" aria-hidden="true"  ></i></span>
+                
+                 <span>Cart</span><span> {{totalItemLength?totalItemLength:''}}</span>
+                 
+              </div>
+              
+          </div>
+        </div>
+      </nav>
+</div>
+  
