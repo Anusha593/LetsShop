@@ -14,6 +14,10 @@ public isCollapsed:boolean=true;
   totalItemLength: any;
   searchText:any;
 faShoppingBag=faShoppingBag;
+  homeFlag: boolean=false;
+  fashionFalg: boolean=false;
+  electronicsFlag: boolean=false;
+  jewelleryFlag: boolean=false;
 constructor(private cart:CartService,private http:HttpService,private router:Router){}
 ngOnInit(){
  this.cart.getProducts().subscribe((data:any)=>{
@@ -30,5 +34,31 @@ getGoods(data:string){
   console.log('is data coming',data)
   //this.http.sendMessages(data); 
     this.router.navigateByUrl('/products');
+}
+navTabClicked(data:string){
+  if(data==='home'){
+  this.homeFlag=true;
+  this.fashionFalg=false;
+  this.electronicsFlag=false;
+  this.jewelleryFlag=false;
+  }
+  else if(data==='fashion'){
+    this.homeFlag=false;
+    this.fashionFalg=true;
+    this.electronicsFlag=false;
+    this.jewelleryFlag=false;
+    }
+    else if(data==='jewellery'){
+      this.homeFlag=false;
+      this.fashionFalg=false;
+      this.electronicsFlag=false;
+      this.jewelleryFlag=true;
+      }
+      else if(data==='electronics'){
+        this.homeFlag=false;
+        this.fashionFalg=false;
+        this.electronicsFlag=true;
+        this.jewelleryFlag=false;
+        }
 }
 }

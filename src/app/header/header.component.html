@@ -1,30 +1,5 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarColor03" (click)="!isCollapsed=isCollapsed">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav> -->
+<div class="container-fluid">
+
 <div class="ml-250">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
@@ -34,7 +9,7 @@
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active"  routerLink="/home">
+                <a class="nav-link"  routerLink="/home">
                   
 <span class="logo">
   <span>Let's</span>
@@ -47,20 +22,20 @@
                 </a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link active"  routerLink="/home">Home
+                <a  class="nav-link" [routerLinkActive]="['active']" routerLink="/home" [ngClass]="{'active':homeFlag===true}"(click)="navTabClicked('home')">Home
                  
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"  routerLink="/fashion">Fashion
+                <a class="nav-link"  [routerLinkActive]="['active']" routerLink="/fashion" [ngClass]="{'active':fashionFalg===true}" (click)="navTabClicked('fashion')">Fashion
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" routerLink="/jewelery">Jewellery</a>
+                <a class="nav-link" [routerLinkActive]="['active']" routerLink="/jewelery" [ngClass]="{'active':jewelleryFlag===true}" (click)="navTabClicked('jewellery')">Jewellery</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/electronics">Electronics</a>
+                <a class="nav-link" [routerLinkActive]="['active']" routerLink="/electronics" [ngClass]="{'active':electronicsFlag===true}" (click)="navTabClicked('electronics')">Electronics</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
@@ -83,12 +58,12 @@
             <div class="cart" routerLink="/cart">
               <span><i class="fa fa-shopping-cart" aria-hidden="true"  ></i></span>
                 
-                 <span>Cart</span><span> {{totalItemLength?totalItemLength:''}}</span>
+                 <span>Cart</span><span class="mr-2"> {{totalItemLength?totalItemLength:''}}</span>
                  
               </div>
-              
+              <i class="fa fa-power-off" aria-hidden="true" style="color:white" routerLink="/logout"></i> 
           </div>
         </div>
       </nav>
 </div>
-  
+</div>

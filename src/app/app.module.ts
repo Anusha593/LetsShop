@@ -25,9 +25,13 @@ import { ButtonModule } from "primeng/button";
 import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes=[
-  {path:'',component:HomeComponent},  
+  {path:'',component:LoginComponent},  
+  {path:'login',component:LoginComponent},
+  {path:'logout',component:LogoutComponent},
     {path:'home',component:HomeComponent},
     {path:'fashion',component:FashionComponent},
   {path:'cart',component:CartComponent},
@@ -51,7 +55,9 @@ const routes=[
     ProductDescriptionComponent,
     FooterComponent,
     SortDirective,
-    ThricePipe
+    ThricePipe,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
