@@ -45,7 +45,7 @@ getGoodsData(){
  })
    }
    descriptionPage(title: any, price: any, image: any, description: any,pageName:string) {
-
+//comment added
     let navigationExtras: NavigationExtras = {
       queryParams: {
         'title': title, 'price': price, 'image': image, 'description': description,'pageName':pageName
