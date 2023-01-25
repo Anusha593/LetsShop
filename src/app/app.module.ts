@@ -27,11 +27,13 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes=[
   {path:'',component:LoginComponent},  
   {path:'login',component:LoginComponent},
   {path:'logout',component:LogoutComponent},
+  {path:'register',component:RegistrationComponent},
     {path:'home',component:HomeComponent},
     {path:'fashion',component:FashionComponent},
   {path:'cart',component:CartComponent},
@@ -57,7 +59,8 @@ const routes=[
     SortDirective,
     ThricePipe,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

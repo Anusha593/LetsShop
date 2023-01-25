@@ -3,7 +3,7 @@
     <div class="card mb-3 card-adj col-md-3" style="outline: none;border:none" *ngFor="let x of newArr | filter:searchText">
    
         <div class="card-body">
-        <img class="card-img-top img-height" src="{{x.image}}">
+        <img class="card-img-top img-height" src="{{x.image}}" (click)="descriptionPage(x.title,x.price,x.image,x.description,'Electronics')">
       <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
     </div>
     <h6 class="card-header" style="white-space: nowrap;

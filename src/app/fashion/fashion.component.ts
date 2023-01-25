@@ -39,11 +39,11 @@ this.getSearchText();
 
     });
   }
-  descriptionPage(title: any, price: any, image: any, description: any) {
+  descriptionPage(title: any, price: any, image: any, description: any,pageName:string) {
 
     let navigationExtras: NavigationExtras = {
       queryParams: {
-        'title': title, 'price': price, 'image': image, 'description': description
+        'title': title, 'price': price, 'image': image, 'description': description,'pageName':pageName
       }
     };
     this.router.navigate(['/description'], navigationExtras);

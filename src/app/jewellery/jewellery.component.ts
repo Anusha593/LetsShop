@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { CartService } from '../cart.service';
 import { HttpService } from '../http.service';
 
@@ -13,7 +14,7 @@ export class JewelleryComponent {
   newArr:any
   productData: any;
   searchText: any;
-    constructor(private cart:CartService,private http:HttpService,private _detector: ChangeDetectorRef
+    constructor(private cart:CartService,private http:HttpService,private _detector: ChangeDetectorRef,private router:Router
       ){
            
     }
@@ -43,5 +44,13 @@ getGoodsData(){
  
  })
    }
- 
+   descriptionPage(title: any, price: any, image: any, description: any,pageName:string) {
+
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        'title': title, 'price': price, 'image': image, 'description': description,'pageName':pageName
+      }
+    };
+    this.router.navigate(['/description'], navigationExtras);
+ }
 }
